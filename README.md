@@ -1,1 +1,1 @@
-# bt-bot
+# BT Bot - Discord Torrent Client
