@@ -3,6 +3,10 @@
 #include <string>
 #include <iostream>
 
+#include "debug-helper.h"
+
+
+
 const std::string BOT_TOKEN = [](){
     const char* tok = std::getenv("DISCORD_BOT_TOKEN");
     if(!tok) {
@@ -13,6 +17,8 @@ const std::string BOT_TOKEN = [](){
 }();
 
 int main() {
+    disable_stdout(); // Disables stdout for gdb while debugging
+
     std::cout << "YOLO TIME!" << std::endl;
 
     // Combine the default intents with the privileged message_content intent
